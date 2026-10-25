@@ -1,6 +1,5 @@
 import mac from "../assets/pics/oauth-logo-google.420169f299402ff6bd627eeff16bad0d.svg";
 import mac2 from "../assets/pics/oauth-logo-github.8ce7a7e3abf7ccf79ccc5b0bdcc9f46e.svg";
-import backgroundImage from "../assets/pics/hero-4.add51103.svg";
 import Reveal from "../components/Reveal";
 import { Link } from "react-router-dom";
 
@@ -63,7 +62,11 @@ const Login = () => {
 
       <section
         className="hidden items-center justify-center bg-cover bg-center px-8 py-12 md:flex"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{
+          backgroundImage: 'url("/hero1.svg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <Reveal>
           <div className="mx-auto w-full max-w-xl rounded-2xl bg-slate-950/30 p-8 text-white lg:p-12">
