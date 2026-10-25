@@ -3,7 +3,6 @@ import pix from "../assets/pics/download.svg";
 import pix1 from "../assets/pics/images.svg";
 import mac from "../assets/pics/oauth-logo-google.420169f299402ff6bd627eeff16bad0d.svg";
 import mac2 from "../assets/pics/oauth-logo-github.8ce7a7e3abf7ccf79ccc5b0bdcc9f46e.svg";
-import backgroundImage from "../assets/pics/hero-4.add51103.svg";
 import Reveal from "../components/Reveal";
 
 const Landing = () => {
@@ -11,7 +10,11 @@ const Landing = () => {
     <main>
       <section
         className="bg-blue-600 bg-cover bg-center px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{
+          backgroundImage: 'url("/hero1.svg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
           <Reveal>
