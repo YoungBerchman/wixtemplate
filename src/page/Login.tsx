@@ -2,6 +2,7 @@ import mac from "../assets/pics/oauth-logo-google.420169f299402ff6bd627eeff16bad
 import mac2 from "../assets/pics/oauth-logo-github.8ce7a7e3abf7ccf79ccc5b0bdcc9f46e.svg";
 import backgroundImage from "../assets/pics/hero-4.add51103.svg";
 import Reveal from "../components/Reveal";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -31,12 +32,14 @@ const Login = () => {
                 autoComplete="current-password"
                 className="w-full rounded-lg border px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"
               />
-              <button
-                type="submit"
-                className="mt-6 flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700 motion-reduce:transition-none"
-              >
-                Log In
-              </button>
+              <Link to="/Landing">
+                <button
+                  type="submit"
+                  className="mt-6 flex w-full items-center justify-center rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700 motion-reduce:transition-none"
+                >
+                  Log In
+                </button>
+              </Link>
             </form>
             <div className="mt-4 grid gap-3">
               <button className="flex w-full items-center justify-center gap-3 rounded-xl border px-4 py-3 font-semibold transition hover:bg-slate-50 motion-reduce:transition-none">
