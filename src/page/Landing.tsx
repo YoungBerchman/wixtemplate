@@ -1,105 +1,95 @@
-// const Landing = () => {
-//   const x = new Date().getTime();
-//   console.log(x);
-
 import { FaArrowRight } from "react-icons/fa";
 import pix from "../assets/pics/download.svg";
 import pix1 from "../assets/pics/images.svg";
 import mac from "../assets/pics/oauth-logo-google.420169f299402ff6bd627eeff16bad0d.svg";
 import mac2 from "../assets/pics/oauth-logo-github.8ce7a7e3abf7ccf79ccc5b0bdcc9f46e.svg";
-import backgroundImage from "../assets/pics/hero-4.add51103.svg"; // Adjust the path to your image
-
-//   return (
-//     <div className="w-full h-[40vh] bg-red-500 flex justify-center items-center">
-//       <div className="w-[40%] h-[30vh] bg-blue-600 flex justify-between items-center">
-//         <Date />
-//       </div>
-//     </div>
-//   );
-// };
-// export default Landing;
+import backgroundImage from "../assets/pics/hero-4.add51103.svg";
+import Reveal from "../components/Reveal";
 
 const Landing = () => {
   return (
-    <div
-      className="w-full h-[800px] bg-blue-500 flex justify-center items-center"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "2100px",
-        backgroundPosition: "contain",
-        backgroundRepeat: "no-repeat",
-        // Optional: Add a purple overlay
-        position: "static",
-      }}
-    >
-      <div className="flex flex-col justify-center items-center">
-        <div className="w-[70vw] h-[70vh]  flex-col justify-center items-center flex mt-96 ">
-          <div className="flex justify-center items-start w-full">
-            <button className="w-[52vw] h-[5vh] bg-blue-950 flex justify-center items-center] rounded-3xl text-white gap-1  mt-48">
-              DigitalOcean GPU Droplet are now available.Perfect for yourAI/ML
-              worksload.Learn more
-              <div className="flex mt-1 items-center">
-                <FaArrowRight />
-              </div>
-            </button>
-          </div>
-          <div className="text-5xl font-bold flex justify-center items-center text-white w-full text-center mt-10">
-            Learn here. Dream here.
-            <br /> Develop here.
-          </div>
-          <div className="font-normal text-center flex items-center justify-center w-full text-white mt-4">
-            Powerful and production-ready, our cloud platform has the solutions
-            that
-            <br /> devs like you need to succeed whether you're building
-            world-changing AI
-            <br /> apps, running a side project, or building a business.
-          </div>
-          <div className="flex text-center w-[76] text-black gap-4">
-            <button className="py-1 px-4 mt-8 bg-white rounded-3xl font-medium hover:text-white hover:bg-blue-600 transition-all duration-1000">
-              Sign up with email
-            </button>
-            <button className="py-1 px-4 w-[17vw] mt-8 bg-white rounded-3xl font-medium hover:text-white hover:bg-blue-600 transition-all duration-1000 flex justify-between gap-1">
-              <img src={mac} alt="jdoq" />
-              <p>Sign up with Google</p>
-            </button>
-            <button className="py-1 px-4 w-[17vw] mt-8 bg-white rounded-3xl font-medium hover:text-white hover:bg-blue-600 transition-all duration-1000 flex justify-between gap-1">
-              <img src={mac2} alt="jdoq" />
-              <p>Sign up with GitHub</p>
-            </button>
-          </div>
-        </div>
-        <div className="w-[100vw] h-[80vh] mt-16 flex justify-center items-start">
-          <div className="w-[80vw] h-[80vh] mt-14">
-            <img src={pix} alt="diqd" className="rounded-3xl  shadow-2xl" />
-          </div>
-        </div>
-        <div className="w-[100vw] h-[50vh] justify-center  flex items-center">
-          <div className="w-[80vw] h-[35vh] bg-blue-600 rounded-2xl flex-col flex justify-center items-start mt-96">
-            <div className="flex justify-between w-[100%] h-[35vh]">
-              <div className="ml-14 w-[80vw] h-[35vh]">
-                <div className="text-2xl font-bold text-white mt-6">
-                  Now Available: GPU Droplets
-                </div>
-                <div className="w-[37vw] h-[20vh] mt-4 font-medium text-white">
-                  GPU solutions for everyone—novice to expert. Run training and
-                  inference, process large data sets and complex neural
-                  networks, and deploy high-performance computing clusters
-                </div>
-                <div className="flex justify-between items-center w-[9vw] h-[5vh]">
-                  <p className="font-medium text-white mb-9">Learn more</p>
-                  <div className="flex justify-center items-center mb-9">
-                    <FaArrowRight />
-                  </div>
-                </div>
-              </div>
-              <div className="w-[100vw] h-[35vh]">
-                <img src={pix1} alt="ofo" className="w-[1400px] h-[39vh]" />
-              </div>
+    <main>
+      <section
+        className="bg-blue-600 bg-cover bg-center px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16"
+        style={{ backgroundImage: `url(${backgroundImage})` }}
+      >
+        <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
+          <Reveal>
+            <div className="inline-flex max-w-full items-center justify-center gap-2 rounded-full bg-blue-950 px-4 py-3 text-sm text-white sm:text-base">
+              <span>
+                DigitalOcean GPU Droplets are now available. Perfect for your
+                AI/ML workload. Learn more
+              </span>
+              <FaArrowRight className="shrink-0" aria-hidden="true" />
             </div>
-          </div>
+          </Reveal>
+          <Reveal delay={0.1}>
+            <h1 className="mt-8 text-4xl font-bold leading-tight text-white sm:mt-10 sm:text-5xl lg:text-6xl">
+              Learn here. Dream here.
+              <br /> Develop here.
+            </h1>
+          </Reveal>
+          <Reveal delay={0.18}>
+            <p className="mt-5 max-w-3xl text-base text-white sm:text-lg">
+              Powerful and production-ready, our cloud platform has the
+              solutions that devs like you need to succeed whether you&apos;re
+              building world-changing AI apps, running a side project, or
+              building a business.
+            </p>
+          </Reveal>
+          <Reveal delay={0.25}>
+            <div className="mt-8 flex w-full max-w-3xl flex-col justify-center gap-3 sm:flex-row sm:flex-wrap">
+              <button className="rounded-full bg-white px-5 py-3 font-medium text-slate-900 transition hover:bg-blue-100 motion-reduce:transition-none">
+                Sign up with email
+              </button>
+              <button className="flex items-center justify-center gap-3 rounded-full bg-white px-5 py-3 font-medium text-slate-900 transition hover:bg-blue-100 motion-reduce:transition-none">
+                <img src={mac} alt="" className="h-5 w-5" />
+                Sign up with Google
+              </button>
+              <button className="flex items-center justify-center gap-3 rounded-full bg-white px-5 py-3 font-medium text-slate-900 transition hover:bg-blue-100 motion-reduce:transition-none">
+                <img src={mac2} alt="" className="h-5 w-5" />
+                Sign up with GitHub
+              </button>
+            </div>
+          </Reveal>
+          <Reveal delay={0.32}>
+            <img
+              src={pix}
+              alt="DigitalOcean cloud platform preview"
+              className="mt-12 w-full rounded-2xl shadow-2xl sm:mt-16"
+            />
+          </Reveal>
         </div>
-      </div>
-    </div>
+      </section>
+
+      <section className="px-4 py-12 sm:px-6 sm:py-16">
+        <Reveal>
+          <div className="mx-auto grid max-w-6xl overflow-hidden rounded-2xl bg-blue-600 text-white md:grid-cols-2">
+            <div className="flex flex-col justify-center p-6 sm:p-10 lg:p-12">
+              <h2 className="text-2xl font-bold sm:text-3xl">
+                Now Available: GPU Droplets
+              </h2>
+              <p className="mt-4 leading-relaxed">
+                GPU solutions for everyone—novice to expert. Run training and
+                inference, process large data sets and complex neural networks,
+                and deploy high-performance computing clusters.
+              </p>
+              <a
+                href="#"
+                className="mt-6 inline-flex w-fit items-center gap-2 font-medium"
+              >
+                Learn more <FaArrowRight aria-hidden="true" />
+              </a>
+            </div>
+            <img
+              src={pix1}
+              alt="GPU Droplets illustration"
+              className="h-56 w-full object-contain p-4 sm:h-72 md:h-full md:min-h-80"
+            />
+          </div>
+        </Reveal>
+      </section>
+    </main>
   );
 };
 

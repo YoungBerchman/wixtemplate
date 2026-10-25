@@ -1,49 +1,44 @@
 import pix from "../assets/pics/oauth-logo-google.420169f299402ff6bd627eeff16bad0d.svg";
 import pix1 from "../assets/pics/oauth-logo-github.8ce7a7e3abf7ccf79ccc5b0bdcc9f46e.svg";
-import backgroundImage from "../assets/pics/image10.png"; // Adjust the path to your image
+import backgroundImage from "../assets/pics/image10.png";
+import Reveal from "../components/Reveal";
 
 const Signup = () => {
   return (
-    <div
-      className="w-full h-[100vh] flex justify-center items-center flex-col shadow-lg"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center", // Optional: to add a red tint
-      }}
+    <main
+      className="flex min-h-[calc(100vh-4rem)] flex-col items-center justify-center bg-cover bg-center px-4 py-10 sm:px-6"
+      style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <div className="w-[37%] h-[60vh] bg-white rounded-[20px] mt-10 flex flex-col">
-        <div className="text-4xl flex ml-20 font-bold">Create your account</div>
-        <div className="flex justify-center ml-5">
-          <div className="w-[90%] mt-5 text-xl font-normal ">
+      <Reveal>
+        <section className="mx-auto w-full max-w-xl rounded-3xl bg-white p-6 shadow-xl sm:p-10">
+          <h1 className="text-3xl font-bold sm:text-4xl">
+            Create your account
+          </h1>
+          <p className="mt-4 text-lg">
             Start spending more time on your projects and less time managing
             your infrastructure.
+          </p>
+          <div className="mt-6 grid gap-3">
+            <button className="flex w-full items-center justify-center gap-3 rounded-xl border px-4 py-3 font-semibold transition hover:bg-slate-50 motion-reduce:transition-none">
+              <img src={pix} alt="" className="h-5 w-5" />
+              Signup with Google
+            </button>
+            <button className="flex w-full items-center justify-center gap-3 rounded-xl border px-4 py-3 font-semibold transition hover:bg-slate-50 motion-reduce:transition-none">
+              <img src={pix1} alt="" className="h-5 w-5" />
+              Signup with Github
+            </button>
+            <button className="w-full rounded-xl bg-blue-600 px-4 py-3 font-semibold text-white transition hover:bg-blue-700 motion-reduce:transition-none">
+              Signup with Email
+            </button>
           </div>
-        </div>
-        <div className="flex justify-center">
-          <button className="rounded-[12px] w-[80%] h-[7vh] flex justify-center mt-6 items-center border font-semibold gap-3 hover:text-white hover:bg-blue-600 transition-all duration-1000">
-            <img src={pix} alt="Google logo" />
-            <p>Signup with Google</p>
-          </button>
-        </div>
-        <div className="flex justify-center">
-          <button className="rounded-[12px] w-[80%] bg-white h-[7vh] flex justify-center mt-6 items-center border font-semibold gap-3 text-black hover:text-white hover:bg-blue-600 transition-all duration-1000">
-            <img src={pix1} alt="Github logo" />
-            <p>Signup with Github</p>
-          </button>
-        </div>
-        <div className="flex justify-center">
-          <button className="rounded-[12px] w-[80%] h-[7vh] flex justify-center mt-6 items-center border font-semibold bg-blue-600 text-white hover:opacity-90 transition-all duration-100">
-            <p>Signup with Email</p>
-          </button>
-        </div>
-
-        <div></div>
-      </div>
-      <div className="w-[80vw] mt-3 flex justify-center items-center text-center">
-        By signing up you agree to the Terms of Service and Privacy Policy
-      </div>
-    </div>
+        </section>
+      </Reveal>
+      <Reveal delay={0.12}>
+        <p className="mx-auto mt-4 w-full max-w-xl text-center text-sm text-white">
+          By signing up you agree to the Terms of Service and Privacy Policy
+        </p>
+      </Reveal>
+    </main>
   );
 };
 
