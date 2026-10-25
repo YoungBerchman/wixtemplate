@@ -1,7 +1,6 @@
 import NewComp from "../components/newComp";
 import conn from "../assets/pics/air.svg";
 import { FaArrowRight } from "react-icons/fa";
-import backgroundImage from "?url../assets/pics/hero-4.add51103.svg";
 import Reveal from "../components/Reveal";
 
 const Home = () => {
@@ -9,7 +8,11 @@ const Home = () => {
     <main>
       <section
         className="flex min-h-[34rem] items-center justify-center bg-[#080b36] bg-cover bg-center px-4 py-20 sm:min-h-[40rem] sm:px-6"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
+        style={{
+          backgroundImage: 'url($"/hero.svg")',
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
         <div className="mx-auto w-full max-w-5xl text-center">
           <Reveal>
