@@ -9,7 +9,7 @@ const Home = () => {
       <section
         className="flex min-h-[34rem] items-center justify-center bg-[#080b36] bg-cover bg-center px-4 py-20 sm:min-h-[40rem] sm:px-6"
         style={{
-          backgroundImage: 'url($"/hero.svg")',
+          backgroundImage: 'url("/hero.svg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
