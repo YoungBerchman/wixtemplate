@@ -63,7 +63,7 @@ const Login = () => {
       <section
         className="hidden items-center justify-center bg-cover bg-center px-8 py-12 md:flex"
         style={{
-          backgroundImage: 'url("/hero1.svg")',
+          backgroundImage: 'url("/hero.svg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

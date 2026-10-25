@@ -11,7 +11,7 @@ const Landing = () => {
       <section
         className="bg-blue-600 bg-cover bg-center px-4 pb-12 pt-12 sm:px-6 sm:pb-16 sm:pt-16"
         style={{
-          backgroundImage: 'url("/hero1.svg")',
+          backgroundImage: 'url("/hero.svg")',
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
