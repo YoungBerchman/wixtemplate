@@ -1,7 +1,7 @@
 import NewComp from "../components/newComp";
 import conn from "../assets/pics/air.svg";
 import { FaArrowRight } from "react-icons/fa";
-import backgroundImage from "../assets/pics/hero-4.add51103.svg";
+import backgroundImage from "?url../assets/pics/hero-4.add51103.svg";
 import Reveal from "../components/Reveal";
 
 const Home = () => {
